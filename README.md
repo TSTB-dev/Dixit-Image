@@ -21,7 +21,10 @@ To get started with Dixit-Image:
    ```
    pip install -r requirements.txt
    ```
-3. Explore the documentation for guidance on how to use the tools.
+3. Run streamlit by:
+    ```
+    streamlit run main.py
+    ```
 
 ## Contributing
 
