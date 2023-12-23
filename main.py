@@ -61,17 +61,17 @@ def main_page():
             
             model = genai.GenerativeModel(GEMINI_MODEL)
             input_prompt = json.dumps(st.session_state["messages"], ensure_ascii=False)
-            response_gen = model.generate_content([input_prompt, img], stream=True)
+            response_gen = model.generate_content([user_input, img], stream=True)
             
+            buffer = ""
             with st.chat_message("Bot"):
                 msg_placeholder = st.empty()  
                 for chunk in response_gen:
-                    if isinstance(chunk, str):
-                        msg_placeholder.markdown(chunk.text + "▌")
+                    buffer += chunk.text
+                    msg_placeholder.markdown(buffer + "▌")
 
-            full_response: str = chunk.text
-            msg_placeholder.markdown(full_response)
-            st.session_state["messages"].append({"role": "bot", "content": full_response})
+            msg_placeholder.markdown(buffer)
+            st.session_state["messages"].append({"role": "bot", "content": buffer})
     
     
 if __name__ == "__main__":
