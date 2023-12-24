@@ -1,17 +1,10 @@
 # Dixit-Image
 
-Welcome to the Dixit-Image GitHub repository! This repository is dedicated to providing tools and resources for advanced image processing and generation. Our goal is to create a platform where developers and enthusiasts can collaborate and innovate in the field of digital imagery.
-
-## Features
-
-- **Advanced Image Processing Algorithms**: Implementations of state-of-the-art image processing techniques.
-- **Image Generation Tools**: Tools to generate images using AI and machine learning models.
-- **Community Contributions**: A space for the community to contribute their own tools and algorithms.
-- **Documentation and Tutorials**: Comprehensive guides and tutorials to help you get started.
+Dixit-ImageはDixitを開発する上で必要となる実装のsubsetです．画像生成やキャプション生成などの機能を揃えています．
 
 ## Getting Started
 
-To get started with Dixit-Image:
+Dixit-Imageを利用するには，以下の手順に従ってください．:
 
 1. Clone the repository:
    ```
@@ -25,6 +18,20 @@ To get started with Dixit-Image:
     ```
     streamlit run main.py
     ```
+
+## AIプレイヤーによる投票
+プレイヤーが場に出した4枚の画像から，AIプレイヤーは親のタイトルと最も類似する画像を選択します．現状の実装では，GPT4-VもしくはGemini Pro Visionを用いて類似度のスコアを予測しています．実装のサンプルは以下のコマンドを実行すると，起動します．
+   ```
+   streamlit run ai_vote_sample.py
+   ```
+このサンプルでは，`./images`ディレクトリを参照して，その内部の画像から4枚の画像を選択し，適当な親のタイトルの設定とGPT4Vによるその解析を行えます．
+
+## 親のテキストからの画像生成(DALL・E3)
+Comming soon...
+
+
+
+
 
 ## Contributing
 
