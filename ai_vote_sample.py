@@ -191,7 +191,7 @@ def main_page():
         # Vote
         st.write("Vote Results")
         cols = st.columns(1)
-        argmax_idx = np.argmax(scores)
+        argmax_idx = int(np.argmax(scores))
         st.image(str(st.session_state["selected_images"][argmax_idx]), use_column_width=True)
         
 

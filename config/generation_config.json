@@ -1,0 +1,8 @@
+{
+    "model": "dall-e-3",
+    "prompt": "some nice guy",
+    "size": "1024x1024",
+    "quality": "standard",
+    "n": 1,
+    "response_format": "url"
+}

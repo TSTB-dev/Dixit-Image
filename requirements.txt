@@ -2,3 +2,5 @@ jupyter
 google-generativeai
 openai
 streamlit
+python-dotenv
+flask
