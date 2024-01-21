@@ -25,8 +25,19 @@ SAVE_DIR = "./data/images"
 DATA_CONFIG_PATH = "./data/generated_images.json"
 
 IMAGE_GENERATION_PROMPT = """
-以下のタイトルから推測できる絵画調の画像を生成してください．
-タイトル: {}
+Generate an image that matches the following title.
+Create visual representations that often blend unrealistic and contradictory elements, drawing inspiration primarily from Japanese animation and watercolor styles.
+The generation guideline is here.
+- Avoid including any copyrighted or real-world recognizable material.
+- Produce images encompassing a background, maintaining a portrait orientation.
+- Refrain from incorporating text into the images.
+- Use a variety of styles, including beautiful imagery, picture book-style 
+- there are no text string image
+- If given prompt violates copyright, generate inspired characters for this contents.
+The overall style should be Japanese anime style, Japanese watercolor style, or Japanese two-dimensional illustration style.
+
+Generate an image which is inspired from the following title.
+Title: {}
 """
 
 PREDICT_SCORE_PROMPT = """
