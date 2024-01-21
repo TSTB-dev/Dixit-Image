@@ -5,5 +5,6 @@ url = 'http://localhost:5000/generate' # ここにPOSTリクエストを送り�
 data = {'title': title} # ここにPOSTしたいデータを辞書形式で設定します
 
 response = requests.post(url, data=data)
+print(response.status_code) # ステータスコードを出力します
 
 print(response.text) # サーバーからのレスポンスを出力します
